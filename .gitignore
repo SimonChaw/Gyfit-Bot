@@ -37,6 +37,9 @@ pip-delete-this-directory.txt
 # Prawn INI
 praw.ini
 
+#Youtube API Key
+youtube_api_key
+
 # Unit test / coverage reports
 htmlcov/
 .tox/
