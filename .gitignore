@@ -40,6 +40,9 @@ praw.ini
 #Youtube API Key
 youtube_api_key
 
+#videos
+videos/
+
 # Unit test / coverage reports
 htmlcov/
 .tox/
