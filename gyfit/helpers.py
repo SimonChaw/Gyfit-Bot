@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+import youtube_dl
 import json
 import urllib
 import os
+import ffmpeg
 
 with open(os.path.dirname(__file__) + '/../youtube_api_key') as f:
     api_key = f.read()
@@ -34,3 +37,16 @@ def isProperLength(duration):
                 return False
     else:
         return False
+
+def downloadVideo(url):
+    ydl_opts = {
+        #'outtmpl': os.path.dirname(__file__) + '/../videos/%(title)s-%(id)s.%(ext)s'
+        'outtmpl': os.path.dirname(__file__) + '/../videos/vid.mp4'
+    }
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        ydl.download([url])
+        toGif(os.path.dirname(__file__) + '/../videos/vid.mp4')
+
+
+def toGif(vidPath):
+    return True

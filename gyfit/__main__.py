@@ -25,4 +25,4 @@ for submission in subreddit.stream.submissions():#get new submissions in this su
                 print comment.author
                 if helpers.getVideoLength(submission.url.split('=')[1]):
                     #its the proper length
-                    comment.reply("Help is on the way!")
+                    helpers.downloadVideo(submission.url)
